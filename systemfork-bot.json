@@ -4,13 +4,13 @@
     "minor_version": 0
   },
   "display_information": {
-    "name": "HelperBot",
+    "name": "systemFork",
     "description": "A versatile bot for task monitoring, status updates, and general assistance.",
     "background_color": "#d2b47a"
   },
   "features": {
     "bot_user": {
-      "display_name": "HelperBot",
+      "display_name": "systemFork",
       "always_online": true,
       "description": "Provides status checks, reminders, and automated updates."
     },
@@ -50,7 +50,7 @@
     "org_deploy_enabled": false,
     "socket_mode_enabled": true,
     "token_rotation_enabled": true,
-    "pretty_name": "Helper Bot",
+    "pretty_name": "systemFork",
     "primary_color": "#d2b47a",
     "interactivity": {
       "is_enabled": true,

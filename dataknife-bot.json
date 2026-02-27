@@ -4,13 +4,13 @@
     "minor_version": 0
   },
   "display_information": {
-    "name": "IdeaBot",
+    "name": "dataKnife",
     "description": "A general-purpose bot for brainstorming sessions and polling ideas.",
     "background_color": "#7cd197"
   },
   "features": {
     "bot_user": {
-      "display_name": "IdeaBot",
+      "display_name": "dataKnife",
       "always_online": true,
       "description": "Assists with idea generation, voting, and group discussions."
     },
@@ -37,7 +37,7 @@
         "im:write",
         "channels:read",
         "im:read",
-        "mpim:read",
+        "mpip:read",
         "reactions:write",
         "reactions:read",
         "polls:write",
@@ -52,7 +52,7 @@
     "org_deploy_enabled": false,
     "socket_mode_enabled": true,
     "token_rotation_enabled": true,
-    "pretty_name": "Idea Bot",
+    "pretty_name": "dataKnife",
     "primary_color": "#7cd197",
     "interactivity": {
       "is_enabled": true,
