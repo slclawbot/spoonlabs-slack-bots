@@ -1,0 +1,45 @@
+{
+  &quot;display_information&quot;: {
+    &quot;name&quot;: &quot;ProjectIdeatorBot&quot;,
+    &quot;description&quot;: &quot;A bot for ideation and brainstorming in #all-spoonlabs-ai.&quot;,
+    &quot;background_color&quot;: &quot;#7cd197&quot;
+  },
+  &quot;features&quot;: {
+    &quot;bot_user&quot;: {
+      &quot;display_name&quot;: &quot;ProjectIdeatorBot&quot;,
+      &quot;always_online&quot;: true,
+      &quot;description&quot;: &quot;Helps with project ideas, polls, and discussions.&quot;
+    },
+    &quot;slash_commands&quot;: []
+  },
+  &quot;oauth_config&quot;: {
+    &quot;scopes&quot;: {
+      &quot;bot&quot;: [
+        &quot;chat:write&quot;,
+        &quot;chat:write.public&quot;,
+        &quot;im:write&quot;,
+        &quot;channels:read&quot;,
+        &quot;im:read&quot;,
+        &quot;mpim:read&quot;,
+        &quot;reactions:write&quot;,
+        &quot;reactions:read&quot;
+      ]
+    }
+  },
+  &quot;settings&quot;: {
+    &quot;org_deploy_enabled&quot;: false,
+    &quot;socket_mode_enabled&quot;: true,
+    &quot;token_rotation_enabled&quot;: true,
+    &quot;interactivity&quot;: {
+      &quot;is_enabled&quot;: true,
+      &quot;request_url&quot;: &quot;/slack/events&quot;
+    },
+    &quot;event_subscriptions&quot;: {
+      &quot;bot_events&quot;: [
+        &quot;message.channels&quot;,
+        &quot;message.im&quot;
+      ],
+      &quot;request_url_verification_enabled&quot;: true
+    }
+  }
+}

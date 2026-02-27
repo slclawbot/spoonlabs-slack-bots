@@ -1,0 +1,46 @@
+{
+  &quot;display_information&quot;: {
+    &quot;name&quot;: &quot;OvernightHelperBot&quot;,
+    &quot;description&quot;: &quot;A bot for overnight project updates in #lab-v001.&quot;,
+    &quot;background_color&quot;: &quot;#d2b47a&quot;
+  },
+  &quot;features&quot;: {
+    &quot;bot_user&quot;: {
+      &quot;display_name&quot;: &quot;OvernightHelperBot&quot;,
+      &quot;always_online&quot;: true,
+      &quot;description&quot;: &quot;Monitors and reports on lab projects during off-hours.&quot;
+    },
+    &quot;slash_commands&quot;: []
+  },
+  &quot;oauth_config&quot;: {
+    &quot;scopes&quot;: {
+      &quot;bot&quot;: [
+        &quot;chat:write&quot;,
+        &quot;chat:write.public&quot;,
+        &quot;channels:read&quot;,
+        &quot;groups:read&quot;,
+        &quot;im:read&quot;,
+        &quot;mpim:read&quot;,
+        &quot;reactions:write&quot;,
+        &quot;reactions:read&quot;
+      ]
+    }
+  },
+  &quot;settings&quot;: {
+    &quot;org_deploy_enabled&quot;: false,
+    &quot;socket_mode_enabled&quot;: true,
+    &quot;token_rotation_enabled&quot;: true,
+    &quot;interactivity&quot;: {
+      &quot;is_enabled&quot;: true,
+      &quot;request_url&quot;: &quot;/slack/events&quot;
+    },
+    &quot;event_subscriptions&quot;: {
+      &quot;bot_events&quot;: [
+        &quot;message.channels&quot;,
+        &quot;message.groups&quot;,
+        &quot;message.im&quot;
+      ],
+      &quot;request_url_verification_enabled&quot;: true
+    }
+  }
+}
