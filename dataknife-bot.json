@@ -4,25 +4,15 @@
     "minor_version": 1
   },
   "display_information": {
-    "name": "dataKnife"
+    "name": "dataKnife",
+    "description": "A general-purpose bot for brainstorming sessions and polling ideas.",
+    "background_color": "#7cd197"
   },
   "features": {
     "bot_user": {
       "display_name": "dataKnife",
       "always_online": true
-    },
-    "slash_commands": [
-      {
-        "command": "/brainstorm",
-        "description": "Kick off a brainstorming session or quick poll.",
-        "should_escape": false
-      },
-      {
-        "command": "/projects",
-        "description": "Check what projects or tasks you're working on.",
-        "should_escape": false
-      }
-    ]
+    }
   },
   "oauth_config": {
     "scopes": {
@@ -43,6 +33,14 @@
     }
   },
   "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true,
+    "pretty_name": "dataKnife",
+    "primary_color": "#7cd197",
+    "interactivity": {
+      "is_enabled": true
+    },
     "event_subscriptions": {
       "bot_events": [
         "message.channels",
@@ -51,11 +49,8 @@
         "reaction_removed"
       ]
     },
-    "interactivity": {
-      "is_enabled": true
-    },
-    "org_deploy_enabled": false,
-    "socket_mode_enabled": true,
-    "token_rotation_enabled": true
+    "study_info": {
+      "is_studied": false
+    }
   }
 }

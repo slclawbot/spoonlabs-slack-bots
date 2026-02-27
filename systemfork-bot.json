@@ -4,25 +4,15 @@
     "minor_version": 1
   },
   "display_information": {
-    "name": "systemFork"
+    "name": "systemFork",
+    "description": "A versatile bot for task monitoring, status updates, and general assistance.",
+    "background_color": "#d2b47a"
   },
   "features": {
     "bot_user": {
       "display_name": "systemFork",
       "always_online": true
-    },
-    "slash_commands": [
-      {
-        "command": "/status",
-        "description": "Get a status update on current tasks or projects.",
-        "should_escape": false
-      },
-      {
-        "command": "/whatnow",
-        "description": "Suggest what to work on next.",
-        "should_escape": false
-      }
-    ]
+    }
   },
   "oauth_config": {
     "scopes": {
@@ -45,6 +35,14 @@
     }
   },
   "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true,
+    "pretty_name": "systemFork",
+    "primary_color": "#d2b47a",
+    "interactivity": {
+      "is_enabled": true
+    },
     "event_subscriptions": {
       "bot_events": [
         "message.channels",
@@ -54,11 +52,8 @@
         "reaction_removed"
       ]
     },
-    "interactivity": {
-      "is_enabled": true
-    },
-    "org_deploy_enabled": false,
-    "socket_mode_enabled": true,
-    "token_rotation_enabled": true
+    "study_info": {
+      "is_studied": false
+    }
   }
 }
