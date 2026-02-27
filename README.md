@@ -1,12 +1,12 @@
 # Slack Bot Experiment Repo
 
 This repo holds manifests and setup for two Slack bots as part of the spoonlabs-ai experiment:
-- One for project ideation (#all-spoonlabs-ai channel).
-- One for overnight/lab project updates (#lab-v001 channel).
+- dataKnife: General brainstorming and polling bot.
+- systemFork: Task monitoring and status bot.
 
 ## Manifests
-- `project-ideator-bot.json`: JSON manifest for the ideation bot.
-- `overnight-helper-bot.json`: JSON manifest for the lab/overnight bot.
+- `dataknife-bot.json`: JSON manifest for the idea/polling-focused bot.
+- `systemfork-bot.json`: JSON manifest for the monitoring/helper bot.
 
 Import these into Slack at https://api.slack.com/apps via "Create from an app manifest" (select JSON format).
 

@@ -1,29 +1,29 @@
 {
   "_metadata": {
     "major_version": 1,
-    "minor_version": 0
+    "minor_version": 1
   },
   "display_information": {
-    "name": "dataKnife",
-    "description": "A general-purpose bot for brainstorming sessions and polling ideas.",
-    "background_color": "#7cd197"
+    "name": "dataKnife"
   },
   "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": false
+    },
     "bot_user": {
       "display_name": "dataKnife",
-      "always_online": true,
-      "description": "Assists with idea generation, voting, and group discussions."
+      "always_online": true
     },
     "slash_commands": [
       {
         "command": "/brainstorm",
-        "url": "/slack/events",
         "description": "Kick off a brainstorming session or quick poll.",
         "should_escape": false
       },
       {
         "command": "/projects",
-        "url": "/slack/events",
         "description": "Check what projects or tasks you're working on.",
         "should_escape": false
       }
@@ -32,43 +32,39 @@
   "oauth_config": {
     "scopes": {
       "bot": [
+        "channels:history",
+        "channels:read",
         "chat:write",
         "chat:write.public",
-        "im:write",
-        "channels:read",
+        "commands",
+        "im:history",
         "im:read",
-        "mpip:read",
-        "reactions:write",
-        "reactions:read",
+        "im:write",
+        "mpim:history",
+        "mpim:read",
+        "mpim:write",
+        "polls:read",
         "polls:write",
-        "polls:read"
-      ],
-      "command": [
-        "chat:write"
+        "reactions:read",
+        "reactions:write",
+        "users:read"
       ]
     }
   },
   "settings": {
-    "org_deploy_enabled": false,
-    "socket_mode_enabled": true,
-    "token_rotation_enabled": true,
-    "pretty_name": "dataKnife",
-    "primary_color": "#7cd197",
-    "interactivity": {
-      "is_enabled": true,
-      "request_url": "/slack/events"
-    },
     "event_subscriptions": {
       "bot_events": [
         "message.channels",
         "message.im",
         "reaction_added",
         "reaction_removed"
-      ],
-      "request_url_verification_enabled": true
+      ]
     },
-    "study_info": {
-      "is_studied": false
-    }
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true
   }
 }

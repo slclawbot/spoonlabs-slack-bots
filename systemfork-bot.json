@@ -1,29 +1,29 @@
 {
   "_metadata": {
     "major_version": 1,
-    "minor_version": 0
+    "minor_version": 1
   },
   "display_information": {
-    "name": "systemFork",
-    "description": "A versatile bot for task monitoring, status updates, and general assistance.",
-    "background_color": "#d2b47a"
+    "name": "systemFork"
   },
   "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": false
+    },
     "bot_user": {
       "display_name": "systemFork",
-      "always_online": true,
-      "description": "Provides status checks, reminders, and automated updates."
+      "always_online": true
     },
     "slash_commands": [
       {
         "command": "/status",
-        "url": "/slack/events",
         "description": "Get a status update on current tasks or projects.",
         "should_escape": false
       },
       {
         "command": "/whatnow",
-        "url": "/slack/events",
         "description": "Suggest what to work on next.",
         "should_escape": false
       }
@@ -32,30 +32,26 @@
   "oauth_config": {
     "scopes": {
       "bot": [
+        "channels:history",
+        "channels:read",
         "chat:write",
         "chat:write.public",
-        "channels:read",
+        "commands",
+        "groups:history",
         "groups:read",
+        "im:history",
         "im:read",
+        "im:write",
+        "mpim:history",
         "mpim:read",
+        "mpim:write",
+        "reactions:read",
         "reactions:write",
-        "reactions:read"
-      ],
-      "command": [
-        "chat:write"
+        "users:read"
       ]
     }
   },
   "settings": {
-    "org_deploy_enabled": false,
-    "socket_mode_enabled": true,
-    "token_rotation_enabled": true,
-    "pretty_name": "systemFork",
-    "primary_color": "#d2b47a",
-    "interactivity": {
-      "is_enabled": true,
-      "request_url": "/slack/events"
-    },
     "event_subscriptions": {
       "bot_events": [
         "message.channels",
@@ -63,11 +59,13 @@
         "message.im",
         "reaction_added",
         "reaction_removed"
-      ],
-      "request_url_verification_enabled": true
+      ]
     },
-    "study_info": {
-      "is_studied": false
-    }
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true
   }
 }
