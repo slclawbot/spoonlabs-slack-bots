@@ -7,11 +7,6 @@
     "name": "dataKnife"
   },
   "features": {
-    "app_home": {
-      "home_tab_enabled": true,
-      "messages_tab_enabled": true,
-      "messages_tab_read_only_enabled": false
-    },
     "bot_user": {
       "display_name": "dataKnife",
       "always_online": true
@@ -36,15 +31,11 @@
         "channels:read",
         "chat:write",
         "chat:write.public",
-        "commands",
         "im:history",
         "im:read",
         "im:write",
         "mpim:history",
         "mpim:read",
-        "mpim:write",
-        "polls:read",
-        "polls:write",
         "reactions:read",
         "reactions:write",
         "users:read"

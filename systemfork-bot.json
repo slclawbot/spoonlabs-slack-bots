@@ -7,11 +7,6 @@
     "name": "systemFork"
   },
   "features": {
-    "app_home": {
-      "home_tab_enabled": true,
-      "messages_tab_enabled": true,
-      "messages_tab_read_only_enabled": false
-    },
     "bot_user": {
       "display_name": "systemFork",
       "always_online": true
@@ -36,7 +31,6 @@
         "channels:read",
         "chat:write",
         "chat:write.public",
-        "commands",
         "groups:history",
         "groups:read",
         "im:history",
@@ -44,7 +38,6 @@
         "im:write",
         "mpim:history",
         "mpim:read",
-        "mpim:write",
         "reactions:read",
         "reactions:write",
         "users:read"
