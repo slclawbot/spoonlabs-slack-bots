@@ -1,46 +1,68 @@
 {
-  &quot;display_information&quot;: {
-    &quot;name&quot;: &quot;OvernightHelperBot&quot;,
-    &quot;description&quot;: &quot;A bot for overnight project updates in #lab-v001.&quot;,
-    &quot;background_color&quot;: &quot;#d2b47a&quot;
+  "display_information": {
+    "name": "OvernightHelperBot",
+    "description": "Monitors and reports updates for overnight projects in #lab-v001.",
+    "background_color": "#d2b47a"
   },
-  &quot;features&quot;: {
-    &quot;bot_user&quot;: {
-      &quot;display_name&quot;: &quot;OvernightHelperBot&quot;,
-      &quot;always_online&quot;: true,
-      &quot;description&quot;: &quot;Monitors and reports on lab projects during off-hours.&quot;
+  "features": {
+    "bot_user": {
+      "display_name": "OvernightHelperBot",
+      "always_online": true,
+      "description": "Tracks lab progress during off-hours and sends notifications."
     },
-    &quot;slash_commands&quot;: []
+    "slash_commands": [
+      {
+        "command": "/status",
+        "url": "/slack/events",
+        "description": "Get current status of overnight projects.",
+        "should_escape": false
+      }
+    ]
   },
-  &quot;oauth_config&quot;: {
-    &quot;scopes&quot;: {
-      &quot;bot&quot;: [
-        &quot;chat:write&quot;,
-        &quot;chat:write.public&quot;,
-        &quot;channels:read&quot;,
-        &quot;groups:read&quot;,
-        &quot;im:read&quot;,
-        &quot;mpim:read&quot;,
-        &quot;reactions:write&quot;,
-        &quot;reactions:read&quot;
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "chat:write",
+        "chat:write.public",
+        "channels:read",
+        "groups:read",
+        "im:read",
+        "mpim:read",
+        "reactions:write",
+        "reactions:read"
+      ],
+      "command": [
+        "chat:write"
       ]
     }
   },
-  &quot;settings&quot;: {
-    &quot;org_deploy_enabled&quot;: false,
-    &quot;socket_mode_enabled&quot;: true,
-    &quot;token_rotation_enabled&quot;: true,
-    &quot;interactivity&quot;: {
-      &quot;is_enabled&quot;: true,
-      &quot;request_url&quot;: &quot;/slack/events&quot;
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true,
+    "pretty_name": "Overnight Helper Bot",
+    "primary_color": "#d2b47a",
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "/slack/events",
+      "message_shortcut_enabled": false,
+      "menu_selected_item": false,
+      "app_action_support": false
     },
-    &quot;event_subscriptions&quot;: {
-      &quot;bot_events&quot;: [
-        &quot;message.channels&quot;,
-        &quot;message.groups&quot;,
-        &quot;message.im&quot;
+    "event_subscriptions": {
+      "bot_events": [
+        "message.channels",
+        "message.groups",
+        "message.im",
+        "reaction_added",
+        "reaction_removed"
       ],
-      &quot;request_url_verification_enabled&quot;: true
+      "request_url_verification_enabled": true
+    },
+    "study_info": {
+      "is_studied": false,
+      "terms_of_service_url": null,
+      "privacy_policy_url": null
     }
   }
 }

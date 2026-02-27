@@ -1,45 +1,69 @@
 {
-  &quot;display_information&quot;: {
-    &quot;name&quot;: &quot;ProjectIdeatorBot&quot;,
-    &quot;description&quot;: &quot;A bot for ideation and brainstorming in #all-spoonlabs-ai.&quot;,
-    &quot;background_color&quot;: &quot;#7cd197&quot;
+  "display_information": {
+    "name": "ProjectIdeatorBot",
+    "description": "Handles project ideation and brainstorming in #all-spoonlabs-ai. Supports polls, reactions, and DMs.",
+    "background_color": "#7cd197"
   },
-  &quot;features&quot;: {
-    &quot;bot_user&quot;: {
-      &quot;display_name&quot;: &quot;ProjectIdeatorBot&quot;,
-      &quot;always_online&quot;: true,
-      &quot;description&quot;: &quot;Helps with project ideas, polls, and discussions.&quot;
+  "features": {
+    "bot_user": {
+      "display_name": "ProjectIdeatorBot",
+      "always_online": true,
+      "description": "Assists with idea generation, polls, and discussions."
     },
-    &quot;slash_commands&quot;: []
+    "slash_commands": [
+      {
+        "command": "/ideate",
+        "url": "/slack/events",
+        "description": "Start a quick ideation poll or brainstorm session.",
+        "should_escape": false
+      }
+    ]
   },
-  &quot;oauth_config&quot;: {
-    &quot;scopes&quot;: {
-      &quot;bot&quot;: [
-        &quot;chat:write&quot;,
-        &quot;chat:write.public&quot;,
-        &quot;im:write&quot;,
-        &quot;channels:read&quot;,
-        &quot;im:read&quot;,
-        &quot;mpim:read&quot;,
-        &quot;reactions:write&quot;,
-        &quot;reactions:read&quot;
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "chat:write",
+        "chat:write.public",
+        "im:write",
+        "channels:read",
+        "im:read",
+        "mpim:read",
+        "reactions:write",
+        "reactions:read",
+        "polls:write",
+        "polls:read"
+      ],
+      "command": [
+        "chat:write"
       ]
     }
   },
-  &quot;settings&quot;: {
-    &quot;org_deploy_enabled&quot;: false,
-    &quot;socket_mode_enabled&quot;: true,
-    &quot;token_rotation_enabled&quot;: true,
-    &quot;interactivity&quot;: {
-      &quot;is_enabled&quot;: true,
-      &quot;request_url&quot;: &quot;/slack/events&quot;
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": true,
+    "pretty_name": "Project Ideator Bot",
+    "primary_color": "#7cd197",
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "/slack/events",
+      "message_shortcut_enabled": false,
+      "menu_selected_item": false,
+      "app_action_support": false
     },
-    &quot;event_subscriptions&quot;: {
-      &quot;bot_events&quot;: [
-        &quot;message.channels&quot;,
-        &quot;message.im&quot;
+    "event_subscriptions": {
+      "bot_events": [
+        "message.channels",
+        "message.im",
+        "reaction_added",
+        "reaction_removed"
       ],
-      &quot;request_url_verification_enabled&quot;: true
+      "request_url_verification_enabled": true
+    },
+    "study_info": {
+      "is_studied": false,
+      "terms_of_service_url": null,
+      "privacy_policy_url": null
     }
   }
 }
