@@ -1,20 +1,30 @@
 {
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 0
+  },
   "display_information": {
-    "name": "ProjectIdeatorBot",
-    "description": "Handles project ideation and brainstorming in #all-spoonlabs-ai. Supports polls, reactions, and DMs.",
+    "name": "IdeaBot",
+    "description": "A general-purpose bot for brainstorming sessions and polling ideas.",
     "background_color": "#7cd197"
   },
   "features": {
     "bot_user": {
-      "display_name": "ProjectIdeatorBot",
+      "display_name": "IdeaBot",
       "always_online": true,
-      "description": "Assists with idea generation, polls, and discussions."
+      "description": "Assists with idea generation, voting, and group discussions."
     },
     "slash_commands": [
       {
-        "command": "/ideate",
+        "command": "/brainstorm",
         "url": "/slack/events",
-        "description": "Start a quick ideation poll or brainstorm session.",
+        "description": "Kick off a brainstorming session or quick poll.",
+        "should_escape": false
+      },
+      {
+        "command": "/projects",
+        "url": "/slack/events",
+        "description": "Check what projects or tasks you're working on.",
         "should_escape": false
       }
     ]
@@ -42,14 +52,11 @@
     "org_deploy_enabled": false,
     "socket_mode_enabled": true,
     "token_rotation_enabled": true,
-    "pretty_name": "Project Ideator Bot",
+    "pretty_name": "Idea Bot",
     "primary_color": "#7cd197",
     "interactivity": {
       "is_enabled": true,
-      "request_url": "/slack/events",
-      "message_shortcut_enabled": false,
-      "menu_selected_item": false,
-      "app_action_support": false
+      "request_url": "/slack/events"
     },
     "event_subscriptions": {
       "bot_events": [
@@ -61,9 +68,7 @@
       "request_url_verification_enabled": true
     },
     "study_info": {
-      "is_studied": false,
-      "terms_of_service_url": null,
-      "privacy_policy_url": null
+      "is_studied": false
     }
   }
 }

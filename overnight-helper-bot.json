@@ -1,20 +1,30 @@
 {
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 0
+  },
   "display_information": {
-    "name": "OvernightHelperBot",
-    "description": "Monitors and reports updates for overnight projects in #lab-v001.",
+    "name": "HelperBot",
+    "description": "A versatile bot for task monitoring, status updates, and general assistance.",
     "background_color": "#d2b47a"
   },
   "features": {
     "bot_user": {
-      "display_name": "OvernightHelperBot",
+      "display_name": "HelperBot",
       "always_online": true,
-      "description": "Tracks lab progress during off-hours and sends notifications."
+      "description": "Provides status checks, reminders, and automated updates."
     },
     "slash_commands": [
       {
         "command": "/status",
         "url": "/slack/events",
-        "description": "Get current status of overnight projects.",
+        "description": "Get a status update on current tasks or projects.",
+        "should_escape": false
+      },
+      {
+        "command": "/whatnow",
+        "url": "/slack/events",
+        "description": "Suggest what to work on next.",
         "should_escape": false
       }
     ]
@@ -40,14 +50,11 @@
     "org_deploy_enabled": false,
     "socket_mode_enabled": true,
     "token_rotation_enabled": true,
-    "pretty_name": "Overnight Helper Bot",
+    "pretty_name": "Helper Bot",
     "primary_color": "#d2b47a",
     "interactivity": {
       "is_enabled": true,
-      "request_url": "/slack/events",
-      "message_shortcut_enabled": false,
-      "menu_selected_item": false,
-      "app_action_support": false
+      "request_url": "/slack/events"
     },
     "event_subscriptions": {
       "bot_events": [
@@ -60,9 +67,7 @@
       "request_url_verification_enabled": true
     },
     "study_info": {
-      "is_studied": false,
-      "terms_of_service_url": null,
-      "privacy_policy_url": null
+      "is_studied": false
     }
   }
 }
